@@ -1,0 +1,38 @@
+{
+  "name": "pambda-serve-static",
+  "version": "0.0.1",
+  "description": "Serve static files",
+  "author": "Kengo Nakatsuka <kengo.nakatsuka@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/pambda/pambda-serve-static/issues"
+  },
+  "dependencies": {
+    "mime-types": "^2.1.15"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.5.0",
+    "eslint": "^3.19.0"
+  },
+  "homepage": "https://github.com/pambda/pambda-serve-static",
+  "keywords": [
+    "aws",
+    "lambda",
+    "pambda"
+  ],
+  "license": "MIT",
+  "main": "lib",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pambda/pambda-serve-static.git"
+  },
+  "scripts": {
+    "build": "npm run lint && babel -d lib/ src/",
+    "lint": "eslint src"
+  },
+  "files": [
+    "README.md",
+    "lib/"
+  ]
+}
