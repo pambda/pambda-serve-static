@@ -1,7 +1,7 @@
 {
   "name": "pambda-serve-static",
-  "version": "0.0.1",
-  "description": "Serve static files",
+  "version": "0.0.2",
+  "description": "Serve static files for AWS Lambda",
   "author": "Kengo Nakatsuka <kengo.nakatsuka@gmail.com>",
   "bugs": {
     "url": "https://github.com/pambda/pambda-serve-static/issues"
@@ -12,7 +12,7 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-env": "^1.5.0",
+    "babel-preset-env": "^1.5.1",
     "eslint": "^3.19.0"
   },
   "homepage": "https://github.com/pambda/pambda-serve-static",

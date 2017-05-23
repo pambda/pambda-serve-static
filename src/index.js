@@ -44,7 +44,9 @@ export const serveStatic = (root, options) => {
         if (err.code === 'ENOENT') {
           return next(event, context, callback);
         } else if (err.code === 'EISDIR') {
-          return serveIndex(index.concat(), callback);
+          return index.length > 0
+            ? serveIndex(0, callback)
+            : next(event, context, callback);
         }
       }
 
@@ -71,13 +73,15 @@ export const serveStatic = (root, options) => {
       });
     }
 
-    function serveIndex(index, callback) {
-      const indexFile = join(file, index.shift());
+    function serveIndex(indexIndex, callback) {
+      const indexFile = join(file, index[indexIndex]);
 
       serveFile(indexFile, (err, data) => {
         if (err) {
-          if (err.code === 'ENOENT' || indexFile.length > 0) {
-            return serveIndex(index, callback);
+          if (err.code === 'ENOENT') {
+            return ++indexIndex < index.length
+              ? serveIndex(indexIndex, callback)
+              : next(event, context, callback);
           }
 
           return callback(err, null);

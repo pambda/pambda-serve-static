@@ -1,6 +1,6 @@
 # pambda-serve-static
 
-Serve static files.
+Serve static files for AWS Lambda.
 
 ## Installation
 
