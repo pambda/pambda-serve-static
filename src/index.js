@@ -9,7 +9,7 @@ import {
   readFile,
 } from 'fs';
 
-export const serveStatic = (root, options) => {
+export const serveStatic = (root, options = {}) => {
   const {
     basePath = '/',
     maxAge = 0,
