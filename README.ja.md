@@ -1,6 +1,6 @@
 # pambda-serve-static
 
-Serve static files for AWS Lambda.
+AWS Lambda 用 serve-static.
 
 ## Installation
 
@@ -31,18 +31,18 @@ export const handler = createLambda(
 );
 ```
 
-When serving binary files like images, you need to combine with [pambda-binary-support](https://github.com/pambda/pambda-binary-support).
+画像のようなバイナリーファイルを提供する時は、[pambda-binary-support](https://github.com/pambda/pambda-binary-support) と組み合わせる必要がある。
 
 ## serveStatic(root, options)
 
 - `root`
-    - The path on the file system of the root directory where static files are stored.
+    - 静的ファイルが格納されているルートディレクトリのファイルシステム上のパス。
 - `options.basePath`
-    - The base path that serves static files.
+    - 静的ファイルを提供する基点となるパス。
 - `options.index`
-    - The file name of the file to return when the directory is requested.
+    - ディレクトリをリクエストされた時に返すファイルのファイル名。
 - `options.maxAge`
-    - Specify the time in seconds for which the response cache is available.
+    - レスポンスのキャッシュが有効な時間を秒単位で指定する。
 
 ## License
 
