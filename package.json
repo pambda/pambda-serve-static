@@ -10,7 +10,8 @@
     "mime-types": "^2.1.15"
   },
   "devDependencies": {
-    "eslint": "^3.19.0"
+    "eslint": "^4.2.0",
+    "tape": "^4.7.0"
   },
   "homepage": "https://github.com/pambda/pambda-serve-static",
   "keywords": [
@@ -25,7 +26,9 @@
     "url": "git+https://github.com/pambda/pambda-serve-static.git"
   },
   "scripts": {
-    "lint": "eslint lib"
+    "lint": "eslint lib",
+    "prepare": "npm run lint && npm test",
+    "test": "tape test/test*.js"
   },
   "files": [
     "README.md",
