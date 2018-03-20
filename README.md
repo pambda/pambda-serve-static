@@ -11,10 +11,10 @@ npm i pambda-serve-static -S
 ## Usage
 
 ``` javascript
-import { compose, createLambda } from 'pambda';
-import { binarySupport } from 'pambda-binary-support';
-import { cache } from 'pambda-cache';
-import { serveStatic } from 'pambda-serve-static';
+const { compose, createLambda } = require('pambda');
+const { binarySupport } = require('pambda-binary-support');
+const { cache } = require('pambda-cache');
+const { serveStatic } = require('pambda-serve-static');
 
 export const handler = createLambda(
   compose(
