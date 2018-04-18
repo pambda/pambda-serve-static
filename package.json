@@ -1,6 +1,6 @@
 {
   "name": "pambda-serve-static",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Serve static files for AWS Lambda",
   "author": "Kengo Nakatsuka <kengo.nakatsuka@gmail.com>",
   "bugs": {
