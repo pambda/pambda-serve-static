@@ -5,7 +5,7 @@ Serve static files for AWS Lambda.
 ## Installation
 
 ```
-npm i pambda-serve-static -S
+npm i pambda-serve-static
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ const { binarySupport } = require('pambda-binary-support');
 const { cache } = require('pambda-cache');
 const { serveStatic } = require('pambda-serve-static');
 
-export const handler = createLambda(
+exports.handler = createLambda(
   compose(
     cache(),
     binarySupport({
